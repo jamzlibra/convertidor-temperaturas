@@ -2,12 +2,14 @@ import java.util.Scanner;
 
 class ConvertidorTemperaturas {
     private ConvertidorTemperaturas() {
+        // Constructor privado para evitar que se instancie la clase
     }
 
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 
         do {
+            // Menú de opciones
             System.out.println("¿Qué tipo de conversión desea realizar?");
             System.out.println("1. Celsius a Fahrenheit (°C a °F)");
             System.out.println("2. Fahrenheit a Celsius (°F a °C)");
@@ -16,6 +18,7 @@ class ConvertidorTemperaturas {
             double temperaturaCelsius = 0;
             double temperaturaFahrenheit = 0;
 
+            // Realizar la conversión basada en la opción seleccionada por el usuario
             if (opcion == 1) {
                 System.out.println("Ingrese la temperatura en grados Celsius (°C):");
                 temperaturaCelsius = teclado.nextDouble();
@@ -30,6 +33,7 @@ class ConvertidorTemperaturas {
                 System.out.println("Opción no válida.");
             }
 
+            // Preguntar si desea realizar otra conversión
             System.out.println("¿Desea realizar otra conversión? (1: Sí, 2: No)");
             int otraConversion = teclado.nextInt();
 
@@ -39,10 +43,6 @@ class ConvertidorTemperaturas {
 
         } while (true);
 
-        teclado.close();
-    }
-
-    static ConvertidorTemperaturas createConvertidorTemperaturas() {
-        return new ConvertidorTemperaturas();
+        teclado.close(); // Cerrar el scanner al finalizar
     }
 }
