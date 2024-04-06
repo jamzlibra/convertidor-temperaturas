@@ -1,6 +1,9 @@
 import java.util.Scanner;
 
 class ConvertidorTemperaturas {
+    private ConvertidorTemperaturas() {
+    }
+
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 
@@ -37,5 +40,9 @@ class ConvertidorTemperaturas {
         } while (true);
 
         teclado.close();
+    }
+
+    static ConvertidorTemperaturas createConvertidorTemperaturas() {
+        return new ConvertidorTemperaturas();
     }
 }
